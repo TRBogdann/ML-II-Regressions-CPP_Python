@@ -1,8 +1,8 @@
 # -Machine-Learning-III-CPP_Python
 
-This repository covers the following topics:
--Linear Regression
--Logistic Regression
+This repository covers the following topics:<br />
+-Linear Regression<br />
+-Logistic Regression<br />
 
 Compile C++:<br />
 bash sh command exemple(linux):<br />
