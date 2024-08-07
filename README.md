@@ -20,7 +20,7 @@ Mean Absolute Error: 1.71058<br />
 Mean Squared Error: 4.62365<br />
 Root Mean Squared Error: 2.15027<br />
 <br />
-Python+Optimisations<br />
+Python+Optimiations<br />
 <br />
 Model choice:<br />
 check Model_Decision_adv.png<br />
@@ -52,9 +52,9 @@ Accuracy: 67.3913<br />
 [62,30]<br />
 [0,0]<br />
 <br />
-Python+Optimisation:<br />
+Python+Optimization:<br />
 <br />
-Optimisation:<br />
+Optimization:<br />
 Less overfitting by removing m1 coluns<br />
 <br />
 Metrics:<br />
