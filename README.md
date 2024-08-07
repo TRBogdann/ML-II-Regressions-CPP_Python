@@ -113,7 +113,7 @@ Metrics:<br />
 [-6.27068356]<br />
 Train Accuracy: 77.95138888888889<br />
 Test Accuracy: 74.47916666666666<br />
-Confusi0n Matrix:<br />
+Confusion Matrix:<br />
 [103 20]<br />
 [ 29 40]<br />
 <br />
