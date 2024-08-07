@@ -1,0 +1,7 @@
+price,atribute,input
+maintenance,atribute,input
+doors,atribute,input
+people,atribute,input
+luggage,atribute,input
+safety,atribute,input
+decision,atribute,output

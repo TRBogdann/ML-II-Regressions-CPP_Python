@@ -1,0 +1,9 @@
+pregnancies,numeric,input
+glucose,numeric,input
+pressure,numeric,input
+thickness,numeric,input
+insulin,numeric,input
+bmi,numeric,input
+pedigree,numeric,input
+age,numeric,input
+decision,numeric,output

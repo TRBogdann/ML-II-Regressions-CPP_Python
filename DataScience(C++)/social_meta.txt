@@ -1,0 +1,5 @@
+User ID,numeric,input
+Gender,atribute,input
+Age,numeric,input
+EstimatedSalary,numeric,input
+Purchased,atribute,output

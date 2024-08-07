@@ -1,0 +1,4 @@
+TV,numeric,input
+Radio,numeric,input
+Newspaper,numeric,input
+Sales,numeric,output

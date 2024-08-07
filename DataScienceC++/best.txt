@@ -1,0 +1,131 @@
+Compile C++:
+
+bash sh command exemple(linux):
+g++ -o program main_india.cpp utils.cpp encoder.cpp math.cpp  numeric_data.cpp regression.cpp
+
+I still need to improve my c++ models,but still a good learning experience
+
+1.Advertising:
+
+Both C++ and python model performed good, but the python model had better performances
+
+C++
+
+[0.066896,0.154360,0.032748]
+[0.018382]
+Score: 85.7697
+Mean Absolute Error: 1.71058
+Mean Squared Error: 4.62365
+Root Mean Squared Error: 2.15027
+
+Python+Optimisations
+
+Model choice:
+check Model_Decision_adv.png
+
+Optimization:
+Sales and Newspaper are not strongly correlated(Based on correlation matrix and plots)
+so I was able to get more performance by dropping newspaper
+
+Metrics:
+[0.05629162 0.10595119]
+[4.4910921578363965]
+R2:  90.33140996752245
+Mean Aboslute:  1.23924038194498
+MSE:  2.6276441435484172
+RMSE:  1.6210009696321643
+
+2.Social Network
+
+The C++ model cheated by choosing the dominant class. Python model 
+had a better performance , but it seemed like a logistic regression 
+model is not the right model, so i had to find a better model.
+
+Initial Model(Logistic Regression):
+
+C++
+Social Media:
+Train Accuracy: 63.3117
+Accuracy: 67.3913
+[62,30]
+[0,0]
+
+Python+Optimisation:
+
+Optimisation:
+Less overfitting by removing m1 coluns
+
+Metrics:
+Train Accuracy:84.61538461538461
+Test Accuracy:84.0
+Confusion Matrix:
+[61  2]
+[14 23]
+
+Final Model:
+
+Python:
+
+Choosing model:
+The the m3,m4 plot can be patition in four diffrent areas and most of the 0 class 
+elements lie in the bottom left area.Based on this information a decision tree classifier
+seems like the right choice
+
+Check: Model_Decision_social.png
+
+Metrics:
+Train Accuracy:92.3076923076923
+Test Accuracy:92.0
+[58  5]
+[ 3 34]
+
+Highest Performance obtained by using entropy as splitting criteria 
+and a minimum of 10 samples per leaves
+
+Model without Optimization(Major signs of overfitting):
+Train Accuracy:100.0
+Test Accuracy:89.0
+
+
+
+3.India:
+The C++ had major over fitting problems.At first the python logistic regression model
+didn t perform as good either,but i was able to get some extra performance.
+
+C++
+
+[-0.000145,0.010884,-0.025128,-0.000429,0.001137,-0.002761,-0.009039]
+[-0.007623]
+Train Accuracy: 65.7673
+Accuracy: 72
+[105,35]
+[14,21]
+
+Python+Optimisation:
+
+Optimisation:
+Correlation Matrix showed a weak corelation between the next columns 'SkinThickness','BloodPressure','Pregnancies'
+and Outcome.By removing this columns i and using liblinear solver was able to increace the accuracy from 71% to 74%
+
+Metrics:
+[ 0.02509492 -0.00072515  0.04985525  0.30016214  0.02602032]
+[-6.27068356]
+Train Accuracy: 77.95138888888889
+Test Accuracy: 74.47916666666666
+Confusi0n Matrix:
+[103  20]
+[ 29  40]
+
+
+
+4.Numbers(Generic Case):
+C++ Underfitting when using mean but 100 prediction otherwise
+
+C++
+Train Accuracy:100
+Accuracy: 100
+(When the /m is removed, else categorizes either everything  as 0 or everything as 1 for some reason)
+
+Python:
+Train Accuracy:100
+Accuracy: 100
